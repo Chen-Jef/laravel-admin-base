@@ -29,3 +29,5 @@ Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
   	$navbar->right(new \App\Admin\Extensions\Nav\Links());
   
 });
+
+Encore\Admin\Form::extend('scriptinjecter', Field\Interaction\ScriptInjecter::class);

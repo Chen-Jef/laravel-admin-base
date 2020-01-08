@@ -380,8 +380,17 @@ return [
     |--------------------------------------------------------------------------
     | 设置数据表格的操作列显示类
     |--------------------------------------------------------------------------
+    |// 最原始的`按钮图标`形式
+	|'grid_action_class' => \Encore\Admin\Grid\Displayers\Actions::class,
+	|
+	|// 使用`下拉菜单`形式
+	|'grid_action_class' => \Encore\Admin\Grid\Displayers\DropdownActions::class,
+	|
+	|// 使用`右键菜单`形式
+	|'grid_action_class' => \Encore\Admin\Grid\Displayers\ContextMenuActions::class,
+    |
     */
-    'grid_action_class' => \Encore\Admin\Grid\Displayers\DropdownActions::class,
+    'grid_action_class' => \Encore\Admin\Grid\Displayers\Actions::class,
 
     /*
     |--------------------------------------------------------------------------

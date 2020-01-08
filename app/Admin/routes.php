@@ -19,4 +19,8 @@ Route::group([
   	$router->resource('banner', BannerController::class);
   
   	$router->resource('member', MemberController::class);
+  
+  	$router->resource('system_config_group', SystemConfigGroupController::class);
+  	$router->resource('system_config', SystemConfigController::class);
+  	$router->resource('variable_type', VariableTypeController::class);
 });

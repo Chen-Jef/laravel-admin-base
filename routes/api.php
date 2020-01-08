@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 
+const SystemConfig = 'Api\SystemConfigController@';
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +18,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//获取变量类型
+Route::get('getVariableType',SystemConfig.'getVariableType');
+//获取变量分组
+Route::get('getVariableGroup',SystemConfig.'getVariableGroup');
+//获取变量规则
+Route::get('getVariableRule',SystemConfig.'getVariableRule');
