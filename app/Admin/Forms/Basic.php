@@ -35,7 +35,7 @@ class Basic extends Form
             	switch($data_type){
                   	case 'object':                	
                   		$type = 'image';
-                    	$value = $request->file('logo')->store(config('admin.upload.directory.image'), 'admin');
+                    	$value = $request->file($key)->store(config('admin.upload.directory.image'), 'admin');
                     	break;
                 }
             }
