@@ -23,4 +23,5 @@ Route::group([
   	$router->resource('system_config_group', SystemConfigGroupController::class);
   	$router->resource('system_config', SystemConfigController::class);
   	$router->resource('variable_type', VariableTypeController::class);
+    $router->resource('message', MessageController::class);
 });
