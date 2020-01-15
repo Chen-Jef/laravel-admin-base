@@ -26,7 +26,14 @@ class MessageController extends AdminController
     {
         $grid = new Grid(new Message);
 
-
+        $grid->column('nickname', __('Nickname'));
+        $grid->column('content', __('Content'));
+        $grid->column('type', __('Type'));
+        $grid->column('contact', __('Contact'));
+        $grid->column('ip', __('Ip'));
+        $grid->column('created_date', __('Created date'));
+        $grid->column('created_at', __('Created at'));
+        $grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }
@@ -41,7 +48,17 @@ class MessageController extends AdminController
     {
         $show = new Show(Message::findOrFail($id));
 
-
+        $show->field('nickname', __('Nickname'));
+        $show->field('content', __('Content'));
+        $show->field('type', __('Type'));
+        $show->field('contact', __('Contact'));
+        $show->field('ip', __('Ip'));
+        $show->field('created_date', __('Created date'));
+        $show->field('created_at', __('Created at'));
+        $show->field('updated_at', __('Updated at'));
+        $show->field('created_date', __('Created date'));
+        $show->field('created_at', __('Created at'));
+        $show->field('updated_at', __('Updated at'));
 
         return $show;
     }
