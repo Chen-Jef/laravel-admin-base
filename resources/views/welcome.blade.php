@@ -8,6 +8,10 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="{{ admin_asset("vendor/laravel-admin/AdminLTE/bootstrap/css/bootstrap.min.css") }}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{ admin_asset("vendor/laravel-admin/AdminLTE/dist/css/AdminLTE.min.css") }}">
 
     <!-- Styles -->
     <style>
@@ -25,7 +29,7 @@
         }
 
         .flex-center {
-            align-items: center;
+            /*align-items: center;*/
             display: flex;
             justify-content: center;
         }
@@ -81,14 +85,25 @@
 
     <div class="content">
         <div class="title m-b-md">
-            <p>Jef</p>
+            {{--<p>Jef</p>--}}
+            <p>Test</p>
         </div>
         <div class="m-b-md">
-            <p>Email：chenxm0592@hotmail.com</p>
-            <p>Wechat：czf0417</p>
+            {{--<p>Email：chenxm0592@hotmail.com</p>--}}
+            {{--<p>Wechat：czf0417</p>--}}
         </div>
         <div class="links">
-            <a href="https://my.oschina.net/u/3214063?tab=newest&catalogId=0" target="_blank">开源中国博客</a>
+            {{--<a href="https://my.oschina.net/u/3214063?tab=newest&catalogId=0" target="_blank">开源中国博客</a>--}}
+        </div>
+        <div class="box-body">
+            <form pjax-container action="{{action('WelcomeController@messagePost')}}" method="post">
+                <div class="form-group">
+                    <label>留言</label>
+                    <textarea name="message" class="form-control" cols="50" rows="10"></textarea>
+                </div>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <button type="submit" class="btn btn-primary">提交</button>
+            </form>
         </div>
     </div>
 </div>
