@@ -98,8 +98,22 @@
         <div class="box-body">
             <form pjax-container action="{{action('WelcomeController@messagePost')}}" method="post">
                 <div class="form-group">
+                    <label>昵称</label>
+                    <input name="nickname" class="form-control" placeholder="请输入您的昵称:Tony" />
+                </div>
+                <div class="form-group">
+                    <label>联系方式</label>
+                    <select name="type" class="form-control">
+                        <option value="email" selected>Email</option>
+                        <option value="mobile">手机号</option>
+                        <option value="wechat">微信</option>
+                        <option value="qq">QQ</option>
+                    </select>
+                    <input name="contact" class="form-control" placeholder="请输入您的联系方式:10000@qq.com" />
+                </div>
+                <div class="form-group">
                     <label>留言</label>
-                    <textarea name="message" class="form-control" cols="50" rows="10"></textarea>
+                    <textarea name="content" class="form-control" cols="50" rows="10"></textarea>
                 </div>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <button type="submit" class="btn btn-primary">提交</button>
