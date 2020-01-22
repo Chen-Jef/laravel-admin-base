@@ -26,4 +26,3 @@ Route::get('getVariableGroup',SystemConfig.'getVariableGroup');
 //获取变量规则
 Route::get('getVariableRule',SystemConfig.'getVariableRule');
 
-Route::post('messagePost','WelcomeController@messagePost');

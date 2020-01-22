@@ -20,7 +20,7 @@ class CreateMessageTable extends Migration
             $table->string('type',6)->comment('类型：qq/wechat/mobile/email');
             $table->string('contact',30)->index()->comment('联系方式');
             $table->string('ip',15)->comment('IP地址');
-            $table->string('remark',255)->comment('备注');
+            $table->string('remark',255)->nullable()->comment('备注');
             $table->timestamps();
         });
     }
